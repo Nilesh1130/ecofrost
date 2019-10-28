@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>Ecofrost</title>
+        
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <meta content="utf-8" http-equiv="encoding">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        
+        <link href='custom.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-8 col-lg-offset-2">
+                    <form id="contact-form" method="post" action="contact.php" role="form">
+
+                        <div class="messages"></div>
+
+                        <div class="controls">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="power_supply">Power supply *</label>
+                                        <select class="form-control" id="power_supply" name="power_supply" data-error="Please select any one power supply" required>
+                                            <option value="" selected>Please select Power supply</option>
+                                            <option value=1>Solar only</option>
+                                            <option value=2>Solar plus 1 Phase</option>
+                                            <option value=3>Solar plus 1 Phase and 3 Phase</option>
+                                            <option value=4>Solar plus 3 Phase</option>
+                                            <option value=5>Grid 1 phase</option>
+                                            <option value=6>Grid 3 Phase</option>
+                                        </select>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="ice_core_units">Number of Ice Core units *</label>
+                                        <input id="ice_core_units" type="number" name="ice_core_units" class="form-control" placeholder="Any number between 0 to 62 *" required="required" data-error="Number of Ice Core units is required.">
+                                        <div class="help-block with-errors" id="ice_core_error"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="slaves_number">Number of Slaves *</label>
+                                        <input id="slaves_number" type="number" name="slaves_number" class="form-control" placeholder="Any number between 0 and 3 *" required="required" data-error="Number of Slaves is required.">
+                                        <div class="help-block with-errors" id="slaves_error"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="room">Room</label>
+                                        <select class="form-control" id="room" name="room">
+                                            <option value="" selected>Please select Room</option>
+                                            <option value=1>Standard</option>
+                                            <option value=2>Custom</option>
+                                        </select>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="imei">IMEI</label>
+                                        <input id="imei" type="tel" name="imei" class="form-control" placeholder="Only alphanumeric, no special characters">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="iccid">ICCID</label>
+                                        <select class="form-control" id="iccid" name="iccid">
+                                            <option value="" selected>Please select ICCID</option>
+                                            <option value=1>1</option>
+                                            <option value=2>1</option>
+                                        </select>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn btn-success btn-send" value="Submit">
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                    <div id="result"></div
+
+                </div><!-- /.8 -->
+
+            </div> <!-- /.row-->
+
+        </div> <!-- /.container-->
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8=" crossorigin="anonymous"></script>
+        <script src="contact.js"></script>
+    </body>
+</html>
